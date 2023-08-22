@@ -5,7 +5,6 @@
 ```
 cd mysql-hw27
 ls -l
-
 conf.d
 bet.dmp
 README.md
