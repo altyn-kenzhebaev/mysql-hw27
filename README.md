@@ -71,4 +71,4 @@ star slave;
 ```
 ## Проверка работоспособности
 ![image desc](./screens/replica_status.png)
-![image desc](./screens/test_string.png))
+![image desc](./screens/test_string.png)
