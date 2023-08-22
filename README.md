@@ -48,7 +48,7 @@ mysql -uroot -p -D bet < /vagrant/bet.dmp
 mysql> CREATE USER 'repl'@'%' IDENTIFIED BY '!OtusLinux2018';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%' IDENTIFIED BY '!OtusLinux2018';
 ```
-##  Replica (slave) sql-server
+##  Replica (slave) mysql-server
 Также устанавливаем пакеты, настраиваем и запускаем сервис:
 ```
 tar -xf /vagrant/Percona-Server-5.7.43-47-rff1a4d42212-el7-x86_64-bundle.tar 
