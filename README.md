@@ -54,15 +54,12 @@ mysql> GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%' IDENTIFIED BY '!OtusLinux201
 tar -xf /vagrant/Percona-Server-5.7.43-47-rff1a4d42212-el7-x86_64-bundle.tar 
 yum localinstall /root/{Percona-Server-server-57-5.7.43-47.1.el7.x86_64.rpm,Percona-Server-shared-57-5.7.43-47.1.el7.x86_64.rpm,Percona-Server-shared-compat-57-5.7.43-47.1.el7.x86_64.rpm,Percona-Server-client-57-5.7.43-47.1.el7.x86_64.rpm}
 cp /vagrant/conf.d/* /etc/my.cnf.d/
-systemctl start mysql
-```
-Правим настройки для slave:
-```
 vi /etc/my.cnf.d/01-base.cnf
 server-id = 2
 vi /etc/my.cnf.d/05-binlog.cnf
 replicate-ignore-table=bet.events_on_demand
 replicate-ignore-table=bet.v_same_event
+systemctl start mysql
 ```
 Настраиваем репликацию:
 ```
