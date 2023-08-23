@@ -61,6 +61,12 @@ replicate-ignore-table=bet.events_on_demand
 replicate-ignore-table=bet.v_same_event
 systemctl start mysql
 ```
+Также логинимся на mysql root и сбрасываем пароль:
+```
+cat /var/log/mysqld.log | grep 'root@localhost:' | awk '{print $11}'
+mysql -uroot -p
+mysql> ALTER USER USER() IDENTIFIED BY 'YourStrongPassword';
+```
 Настраиваем репликацию:
 ```
 CHANGE MASTER TO MASTER_HOST = "192.168.50.150", MASTER_PORT = 3306, MASTER_USER = "repl", MASTER_PASSWORD = "!OtusLinux2018", MASTER_AUTO_POSITION = 1;
