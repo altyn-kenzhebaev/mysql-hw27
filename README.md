@@ -38,7 +38,7 @@ cat /var/log/mysqld.log | grep 'root@localhost:' | awk '{print $11}'
 mysql -uroot -p
 mysql> ALTER USER USER() IDENTIFIED BY 'YourStrongPassword';
 ```
-Создаем тестовую БД и наполняем его:
+Создаем тестовую БД и наполняем её:
 ```
 mysql> CREATE DATABASE bet;
 mysql -uroot -p -D bet < /vagrant/bet.dmp
