@@ -70,7 +70,7 @@ mysql> ALTER USER USER() IDENTIFIED BY 'YourStrongPassword';
 Настраиваем репликацию:
 ```
 CHANGE MASTER TO MASTER_HOST = "192.168.50.150", MASTER_PORT = 3306, MASTER_USER = "repl", MASTER_PASSWORD = "!OtusLinux2018", MASTER_AUTO_POSITION = 1;
-star slave;
+start slave;
 ```
 ## Проверка работоспособности
 ![image desc](./screens/replica_status.png)
