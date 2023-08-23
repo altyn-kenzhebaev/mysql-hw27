@@ -67,7 +67,7 @@ cat /var/log/mysqld.log | grep 'root@localhost:' | awk '{print $11}'
 mysql -uroot -p
 mysql> ALTER USER USER() IDENTIFIED BY 'YourStrongPassword';
 ```
-Настраиваем репликацию:
+Настраиваем и запускаем репликацию:
 ```
 CHANGE MASTER TO MASTER_HOST = "192.168.50.150", MASTER_PORT = 3306, MASTER_USER = "repl", MASTER_PASSWORD = "!OtusLinux2018", MASTER_AUTO_POSITION = 1;
 start slave;
